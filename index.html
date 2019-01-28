@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BART Scheduler</title>
+  <!-- Bootstrap CSS CDN  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+  <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Get Moment CDN -->
+  <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
+  <!-- Firebase link -->
+  <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+  <script></script>
+</head>
+<body>
+  <!-- Main Bootstrap Search -->
+  <div class="container">
+    <!-- Jumbotron for Title -->
+    <div class="jumbotron" style="background-color: #20315A ; color: white;">
+      <h1 class="text-center">
+        <strong>
+          <i class="fas fa-train"></i> The BART Delay</strong>
+      </h1>
+      <h3 class="text-center">Find out how delayed your BART train is</h3>
+    </div>
+    <!-- Row for Listing trains -->
+    <div class="row">
+      <div class="col-sm-12">
+      <br>
+      <!-- First card is for handling the search parameters -->
+      <div class="card">
+        <div class="card-header">
+          <strong>
+            <i class="fas fa-subway"></i> Current BART Schedule</strong>
+        </div>
+        <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (mins)</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                  </tr>
+                </thead>
+                <tbody id="train-table">
+                  <tr>
+                    <td id="train-display">Thomas</td>
+                    <td id="destination-display">Berkeley</td>
+                    <td id="frequency-display">15</td>
+                    <td id="arrival-display">5</td>
+                    <td id="minutes-display">10</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- This row will handle all of the retrieved articles -->
+  <div class="row">
+    <div class="col-sm-12">
+      <br>
+      <!-- This card will initially be made up of a card and wells for each of the articles retrieved -->
+    <div class="card">
+        <!-- card Heading for the retrieved articles box -->
+      <div class="card-header">
+        <strong>
+          <i class="fas fa-subway"></i> Add Train</strong>
+      </div>
+      <!-- This main card will hold each of the resulting articles -->
+      <div class="card-body" id="article-section">
+          <form role="form">
+            <!-- Here we create the text box for capturing the train name-->
+            <div class="form-group">
+              <label for="search">Train Name</label>
+              <input type="text" class="form-control" id="train-input">
+            </div>
+            <!-- Here we capture the destination  -->
+            <div class="form-group">
+                    <label for="search">Destination</label>
+                    <input type="text" class="form-control" id="destination-input">
+            </div>
+            <!-- Here we capture the First Train Time-->
+            <div class="form-group">
+              <label for="start-year">First Train Time (HH:mm - Military Time)</label>
+              <input type="text" class="form-control" id="first-train-input">
+            </div>
+            <!-- Here we capture the Frequency -->
+            <div class="form-group">
+              <label for="end-year">Frequency (min)</label>
+              <input type="text" class="form-control" id="frequency-input">
+            </div>
+            <!-- Here we have our final submit button -->
+            <button type="submit" class="btn" style="background-color: #20315A ; color: white;" id="run-search"><i class="fa fa-search"></i> Submit</button>
+          </form>
+        </div>      
+        </div>
+      </div>
+    </div>
+    <!-- Footer Region -->
+    <div class="row">
+      <div class="col-sm-12">
+        
+        <hr>
+        <h5 class="text-center">
+          <small>Copyright © BART
+            <i class="fas fa-subway"></i>
+          </small>
+        </h5>
+      </div>
+    </div>
+  </div>
+  <!-- local JS file -->
+  <script src="assets/javascript/app.js"></script>
+  <!-- jQuery JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+  <!-- Code to the JavaScript File -->
+  
+
+</body>
+
+</html>
