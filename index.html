@@ -10,7 +10,8 @@
   <!-- jQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- Get Moment CDN -->
-  <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <!-- <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script> -->
   <!-- Firebase link -->
   <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
   <script></script>
@@ -35,6 +36,7 @@
         <div class="card-header">
           <strong>
             <i class="fas fa-subway"></i> Current BART Schedule</strong>
+            <div><i class="far fa-clock"></i><strong>Time:</strong><strong id="current-time">  </strong></div>
         </div>
         <div class="card-body">
               <table class="table">
@@ -49,11 +51,11 @@
                 </thead>
                 <tbody id="train-table">
                   <tr>
-                    <td id="train-display">Thomas</td>
+                    <!-- <td id="train-display">Thomas</td>
                     <td id="destination-display">Berkeley</td>
                     <td id="frequency-display">15</td>
                     <td id="arrival-display">5</td>
-                    <td id="minutes-display">10</td>
+                    <td id="minutes-display">10</td> -->
                   </tr>
                 </tbody>
               </table>
